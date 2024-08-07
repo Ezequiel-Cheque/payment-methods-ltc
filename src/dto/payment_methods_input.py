@@ -13,6 +13,7 @@ class paymentMethodSchema(BaseModel):
 
 class createManySchema(BaseModel):
     id_psp: str = Field(description="")
+    endpoint: str = Field(description="")
     paymentMethods: List[paymentMethodSchema] = Field(description="")
     
 
@@ -21,4 +22,3 @@ class formatSchema(BaseModel):
     id_country: str = Field(description="")
     id_pay_type: str = Field(description="")
     data: List[dict] = Field(description="")
-    
