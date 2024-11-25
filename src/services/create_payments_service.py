@@ -89,6 +89,8 @@ class CreatePaymentMethods:
                 payload['id_country'] = method['id_country']
                 payload['id_pay_type'] = method['id_pay_type'] 
                 payload['config'] = {}
+                payload['max'] = 0
+                payload['min'] = 0
                 
                 try:
                     ## Insert payment method
